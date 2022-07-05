@@ -1,0 +1,16 @@
+.titles {
+  display: flex;
+  align-itens: center;
+  justify-content: space-between;
+}
+
+.titlesMake {
+  display: flex;
+  flex-direction: row;
+  align-itens: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+ .titlesMake::first-child {
+  color: var(--blue);
+ }

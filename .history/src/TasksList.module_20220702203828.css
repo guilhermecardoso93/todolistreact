@@ -1,0 +1,89 @@
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.tasksListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  border: 1px solid #333333;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  width: 736px;
+  height: 72px;
+}
+
+.tasksListCheck {
+  border-radius: 10px;
+  border: 2px solid var(--blue);
+  background: none;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"] {
+  position: none;
+  cursor: pointer;
+}
+
+.tasksListCheck input[type="checkbox"]:before {
+   content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: red;
+  /*content: "";
+  display: block;
+  position: none;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background-color: white;
+  background: none;*/
+}
+input[type="checkbox"]:checked:after {
+  /* content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid var(--grey-100);
+  background: var(--blue);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;*/
+}
+
+.delete {
+  background: none;
+  border: none;
+  color: var(--gray-100);
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.delete:hover {
+  color: var(--danger);
+}

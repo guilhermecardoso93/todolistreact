@@ -1,0 +1,28 @@
+.titles {
+  display: flex;
+  align-itens: center;
+  justify-content: space-between;
+}
+
+.titlesMake {
+  display: flex;
+  flex-direction: row;
+  align-itens: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+.titlesMakeTitle {
+  color: var(--blue);
+}
+
+.titlesMakeTitleNumber {
+  
+  width: 24px;
+height: 19px;
+
+/* Gray 400 */
+
+background: #333333;
+border-radius: 999px;
+
+}

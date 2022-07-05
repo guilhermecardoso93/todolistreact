@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container input {
+  background: var(--grey-500);
+  color: var(--grey-300);
+  font-size: 16px;
+  line-height: 22px;
+  padding: 1rem;
+  border-radius: 8px;
+}

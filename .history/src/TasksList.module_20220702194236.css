@@ -1,0 +1,83 @@
+.titles {
+  display: flex;
+  align-itens: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.titlesMake,
+.titleDone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.titlesMakeTitle {
+  color: var(--blue);
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.titlesDoneTitle {
+  color: var(--purple);
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.titlesMakeTitleNumber,
+.titlesDoneTitleNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  padding: 2px 8px;
+  height: 19px;
+
+  background: var(--gray-400);
+  color: var(--gray-100);
+  border-radius: 999px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.tasksListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  border: 1px solid #333333;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+border-radius: 8px;
+
+  width: 736px;
+  height: 72px;
+
+  gap: 1rem;
+  color: var(--gray-100);
+}
+
+.tasksListItemCheck {
+  display: flex;
+  align-items: top;
+  justify-content: flex;
+}

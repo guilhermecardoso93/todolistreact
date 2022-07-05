@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container input {
+  background: var(--grey-500);
+  width: 638px;
+  padding:1rem;
+
+}

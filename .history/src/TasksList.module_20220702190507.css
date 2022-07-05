@@ -1,0 +1,11 @@
+.titles{
+  display:flex;
+  align-itens: center;
+  justify-content: space-between;
+}
+
+.titlesMake{
+  display:flex;
+  align-itens: center;
+  justify-content: space-between;
+}

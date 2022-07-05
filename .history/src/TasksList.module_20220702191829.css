@@ -1,0 +1,43 @@
+.titles {
+  display: flex;
+  align-itens: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.titlesMake,
+.titleDone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.titlesMakeTitle {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.titlesDoneTitle {
+  color: var(--blue-dark);
+  font-weight: bold;
+}
+
+.titlesMakeTitleNumber,
+.titlesDoneTitleNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 2px 8px;
+  height: 19px;
+  background: #333333;
+  border-radius: 999px;
+  color: var(--gray-100);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}

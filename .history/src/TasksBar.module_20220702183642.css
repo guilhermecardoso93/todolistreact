@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  top:1;
+}
+
+.container input {
+  background: var(--grey-500);
+
+}
