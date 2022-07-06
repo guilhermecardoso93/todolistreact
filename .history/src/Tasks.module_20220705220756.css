@@ -12,9 +12,8 @@
   display: flex;
   align-itens: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 736px;
-
 }
 
 .titles {

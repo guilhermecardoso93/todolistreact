@@ -12,9 +12,8 @@
   display: flex;
   align-itens: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 736px;
-
 }
 
 .titles {
@@ -238,11 +237,6 @@
   transform: rotate(45deg);
 }
 
-.TaskBorder{
-  border-top: 1px solid #333333;
-  border-radius: 8px;
-}
-
 .placeholderTask {
   display: flex;
   flex-direction: column;
@@ -251,8 +245,8 @@
   width: 688px;
   height: 44px;
 
-  margin-top: 10rem;
-
+  border-top: 1px solid #333333;
+  border-radius: 8px;
 }
 
 .placeholderTask h2 {

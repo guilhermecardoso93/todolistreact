@@ -1,18 +1,19 @@
 import { Trash } from "phosphor-react";
-import { TaskProps } from "./Interfaces";
-
-
+import { useState } from "react";
 
 import styles from "./TasksList.module.css";
 
-interface TaskListProps {
-  task: TaskProps;
-  handleDeleteTask(DeleteTaskById: number): void;
+
+interface TaskProps {
+  id: number;
+  tasksText: string;
 }
 
-export function TaskList({ task, handleDeleteTask }: TaskListProps) {
+export function TaskList(props: TaskProps) {
+ 
+
   return (
-    <div key={task.id}>
+    <div>
       <div className={styles.tasksList}>
         <div className={styles.tasksListItem}>
           <div>
@@ -23,11 +24,12 @@ export function TaskList({ task, handleDeleteTask }: TaskListProps) {
           </div>
           <div>
             <p>
-              {task.tasksText}
+              Integer urna interdum massa libero auctor neque turpis turpis
+              semper. Duis vel sed fames integer.{" "}
             </p>
           </div>
           <div>
-            <button className={styles.delete} onClick={() => handleDeleteTask(task.id)}>
+            <button className={styles.delete} >
               <Trash size={20} />{" "}
             </button>
           </div>
@@ -37,4 +39,5 @@ export function TaskList({ task, handleDeleteTask }: TaskListProps) {
   );
 }
 
-//
+
+//onClick={handleDeleteTask}
