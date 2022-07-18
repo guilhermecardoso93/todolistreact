@@ -99,7 +99,11 @@ export function Tasks() {
             <span>Crie tarefas e organize seus itens a fazer</span>
           </div>
         </div>
+        
+
         {todoList.map((task, key) => (
+
+         
           <TaskList task={task} key={key} handleDeleteTask={handleDeleteTask} />
         ))}
       </div>

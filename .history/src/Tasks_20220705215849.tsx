@@ -1,6 +1,5 @@
 import { useState, ChangeEvent, FormEvent, InvalidEvent } from "react";
-import { PlusCircle } from "phosphor-react";
-import Clipboard from "../src/assets/clipboard.svg";
+import { Clipboard, PlusCircle } from "phosphor-react";
 import { TaskList } from "./TasksList";
 import { TaskProps } from "./Interfaces";
 import { ToastContainer, toast } from "react-toastify";
@@ -92,13 +91,12 @@ export function Tasks() {
             </div>
           </div>
         </div>
-        <div className={styles.TaskBorder}>
-          <div className={styles.placeholderTask}>
-            <img src={Clipboard} alt="lista" />
-            <h2>Você ainda não tem tarefas cadastradas</h2>
-            <span>Crie tarefas e organize seus itens a fazer</span>
-          </div>
+        <div className={styles.placeholderTask}>
+          <Clipboard size={32} />
+          <h2>Você ainda não tem tarefas cadastradas</h2>
+          <span>Crie tarefas e organize seus itens a fazer</span>
         </div>
+
         {todoList.map((task, key) => (
           <TaskList task={task} key={key} handleDeleteTask={handleDeleteTask} />
         ))}

@@ -1,8 +1,8 @@
 import { useState, ChangeEvent, FormEvent, InvalidEvent } from "react";
 import { PlusCircle } from "phosphor-react";
-import Clipboard from "../src/assets/clipboard.svg";
 import { TaskList } from "./TasksList";
 import { TaskProps } from "./Interfaces";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,7 +14,6 @@ export function Tasks() {
 
   function handleNewTask(event: ChangeEvent<HTMLTextAreaElement>) {
     event.preventDefault();
-    event.target.setCustomValidity("");
     setTask(event.target.value);
   }
 
@@ -27,14 +26,11 @@ export function Tasks() {
       const newTask = { id: idRandom(9999999), tasksText: task };
 
       setTodoList([...todoList, newTask]);
+      
       toast.success("Task incluída com sucesso!");
-      setTask("");
-    }
-  }
 
-  function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity("");
-    setTask(event.target.value);
+
+    }
   }
 
   function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
@@ -43,62 +39,29 @@ export function Tasks() {
 
   function handleDeleteTask(DeleteTaskById: number): void {
     setTodoList(todoList.filter((taskName) => taskName.id !== DeleteTaskById));
-    toast.success("Task deletada!");
   }
 
   const isNewTaskInputEmpty = setTodoList.length === 0;
 
   return (
     <>
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-      />
+      <ToastContainer></ToastContainer>
       <div className={styles.mainThing}>
         <form className={styles.container}>
           <textarea
             placeholder="Adicione uma nova tarefa"
             name="task"
             value={task}
-            onChange={handleNewTaskChange}
+            onChange={handleNewTask}
             onInvalid={handleNewCommentInvalid}
             required
           />
 
-          <button
-            type="submit"
-            onClick={addTask}
-            disabled={isNewTaskInputEmpty}
-          >
+          <button type="submit" onClick={addTask} disabled={isNewTaskInputEmpty}>
             Criar <PlusCircle size={20} />{" "}
           </button>
         </form>
 
-        <div className={styles.content}>
-          <div className={styles.titles}>
-            <div className={styles.titlesMake}>
-              <p className={styles.titlesMakeTitle}>Tarafes Criadas</p>
-              <p className={styles.titlesMakeTitleNumber}> 5 </p>
-            </div>
-          </div>
-          <div className={styles.titles}>
-            <div className={styles.titlesMake}>
-              <p className={styles.titlesDoneTitle}>Concluídas</p>
-              <p className={styles.titlesDoneTitleNumber}> 2 de 5 </p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.TaskBorder}>
-          <div className={styles.placeholderTask}>
-            <img src={Clipboard} alt="lista" />
-            <h2>Você ainda não tem tarefas cadastradas</h2>
-            <span>Crie tarefas e organize seus itens a fazer</span>
-          </div>
-        </div>
         {todoList.map((task, key) => (
           <TaskList task={task} key={key} handleDeleteTask={handleDeleteTask} />
         ))}

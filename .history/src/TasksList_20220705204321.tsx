@@ -1,8 +1,6 @@
 import { Trash } from "phosphor-react";
 import { TaskProps } from "./Interfaces";
 
-
-
 import styles from "./TasksList.module.css";
 
 interface TaskListProps {
@@ -27,7 +25,7 @@ export function TaskList({ task, handleDeleteTask }: TaskListProps) {
             </p>
           </div>
           <div>
-            <button className={styles.delete} onClick={() => handleDeleteTask(task.id)}>
+            <button className={styles.delete} onClick={() => handleDeleteTask}>
               <Trash size={20} />{" "}
             </button>
           </div>

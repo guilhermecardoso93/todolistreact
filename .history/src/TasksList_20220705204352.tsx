@@ -1,8 +1,6 @@
 import { Trash } from "phosphor-react";
 import { TaskProps } from "./Interfaces";
 
-
-
 import styles from "./TasksList.module.css";
 
 interface TaskListProps {
